@@ -6,5 +6,11 @@
     <dania_glowne>
       <danie typ="miesne" cena="25zł" na_wage="NIE">Rolada slaska</danie>
     </dania_glowne>
+    <zupy>
+        <zupa></zupa>
+    </zupy>
+    <desery>
+        <deser></deser>
+    </desery>
     
 </menu_restauracji>
