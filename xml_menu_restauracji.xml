@@ -5,12 +5,20 @@
     </przystawki>
     <dania_glowne>
       <danie typ="miesne" cena="25zł" na_wage="NIE">Rolada slaska</danie>
+      <danie typ="ryby i owoce morza" cena="20" na_wage="NIE">Filet z łososia</danie>
+      <danie typ="makarony" cena="16" na_wage="NIE">Rigatoni</danie>
     </dania_glowne>
     <zupy>
-        <zupa></zupa>
+        <zupa cena="7zł">Zupa pomidorowa</zupa>
     </zupy>
     <desery>
-        <deser></deser>
+        <deser cena="14zł" na_wage="TAK">Tiramisu</deser>
     </desery>
-    
+    <napoje>
+      <napój cena="5zł">Kawa</napój>
+      <napój cena="4zł">Herbata</napój>
+    </napoje>
+    <dodatki>
+      <dodatek cena="7zł">Frytki</dodatek>
+    </dodatki>
 </menu_restauracji>
