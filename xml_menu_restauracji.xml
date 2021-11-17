@@ -1,1 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<menu_restauracji>
+    <przystawki>
+      <przystawka typ="wegetariańskie" cena="18zł" na_wage="NIE">Carpaccio z burakow pieczonych</przystawka>
+    </przystawki>
+    <dania_glowne>
+      <danie typ="miesne" cena="25zł" na_wage="NIE">Rolada slaska</danie>
+    </dania_glowne>
+    
+</menu_restauracji>
