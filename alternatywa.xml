@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu_restauracji>
+    <przystawki>
+      <danie typ="wegetariańskie" cena="18zł" na_wagę="NIE">
+          <nazwa>Carpaccio z pieczonych burakow</nazwa>
+          <skladniki>
+            <skladnik>Buraki</skladnik>
+            <skladnik>Orzechy</skladnik>
+            <skladnik>Ser kozi</skladnik>
+          </skladniki>
+      </danie>
+    </przystawki>
+    <dania_główne>
+      <danie typ="mięsne" cena="25zł" na_wagę="NIE">
+         <nazwa>Rolada śląska</nazwa>
+         <skladniki>
+           <skladnik>Wieprzowina</skladnik>
+            <skladnik>Ogorek</skladnik>
+         </skladniki>
+      </danie>
+      <danie typ="ryby i owoce morza" cena="20" na_wagę="NIE">
+          <nazwa>Filet z łososia</nazwa>
+          <skladniki>
+            <skladnik>Łosoś</skladnik>
+            <skladnik>Ziemniaki</skladnik>
+          </skladniki>
+      </danie>
+      <danie typ="makarony" cena="16" na_wagę="NIE">
+        <nazwa>Rigatoni</nazwa>
+        <skladniki>
+          <skladnik>Sos pomidorowy</skladnik>
+          <skladnik>Czosnek</skladnik>
+        </skladniki>
+      </danie>
+    </dania_główne>
+    <zupy>
+        <danie cena="7zł">
+          <nazwa>Zupa pomidorowa</nazwa>
+          <skladniki>
+            <skladnik>Pomidory</skladnik>
+            <skladnik>Czosnek</skladnik>
+          </skladniki>
+        </danie>
+    </zupy>
+    <desery>
+        <danie cena="14zł">
+          <nazwa>Tiramisu</nazwa>
+          <skladniki>
+            <skladnik>Biszkopt</skladnik>
+            <skladnik>Espresso</skladnik>
+            <skladnik>Ser Mascarpone</skladnik>
+          </skladniki>
+        </danie>
+    </desery>
+    <napoje>
+      <napój cena="5zł">Kawa</napój>
+      <napój cena="4zł">Herbata</napój>
+    </napoje>
+    <dodatki>
+      <dodatek cena="7zł">Frytki</dodatek>
+      <dodatek cena="11zł">Sałatka cezar</dodatek>
+    </dodatki>
+</menu_restauracji>
