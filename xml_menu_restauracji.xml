@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <menu_restauracji>
     <przystawki>
-      <przystawka typ="wegetariańskie" cena="18zł" na_wage="NIE">Carpaccio z burakow pieczonych</przystawka>
+      <przystawka typ="wegetariańskie" cena="18zł" na_wagę="NIE">Carpaccio z buraków pieczonych</przystawka>
     </przystawki>
-    <dania_glowne>
-      <danie typ="miesne" cena="25zł" na_wage="NIE">Rolada slaska</danie>
-      <danie typ="ryby i owoce morza" cena="20" na_wage="NIE">Filet z łososia</danie>
-      <danie typ="makarony" cena="16" na_wage="NIE">Rigatoni</danie>
-    </dania_glowne>
+    <dania_główne>
+      <danie typ="mięsne" cena="25zł" na_wagę="NIE">Rolada śląska</danie>
+      <danie typ="ryby i owoce morza" cena="20" na_wagę="NIE">Filet z łososia</danie>
+      <danie typ="makarony" cena="16" na_wagę="NIE">Rigatoni</danie>
+    </dania_główne>
     <zupy>
         <zupa cena="7zł">Zupa pomidorowa</zupa>
     </zupy>
     <desery>
-        <deser cena="14zł" na_wage="TAK">Tiramisu</deser>
+        <deser cena="14zł">Tiramisu</deser>
     </desery>
     <napoje>
       <napój cena="5zł">Kawa</napój>
@@ -20,5 +20,6 @@
     </napoje>
     <dodatki>
       <dodatek cena="7zł">Frytki</dodatek>
+      <dodatek cena="11zł">Sałatka cezar</dodatek>
     </dodatki>
 </menu_restauracji>
