@@ -1,2 +1,83 @@
-<?xml version="1.0"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="menu_restauracji">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="przystawki" minOccurs="0" />
+        <xs:element ref="dania_główne" minOccurs="0"/>
+        <xs:element ref="zupy" minOccurs="0"/>
+        <xs:element ref="desery" minOccurs="0"/>
+        <xs:element ref="napoje" minOccurs="0"/>
+        <xs:element ref="dodatki" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="danie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nazwa" type="xs:string"/>
+        <xs:element name="skladniki">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="skladnik" type="xs:string" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="cena" type="xs:decimal" use="required"/>
+      <xs:attribute name="na_wagę" type="xs:string" use="optional"/>
+      <xs:attribute name="typ" type="xs:string" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="przystawki">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="danie" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dania_główne">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="danie" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="zupy">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="danie" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="desery">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="danie" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="napoje">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="napój" maxOccurs="unbounded">
+          <xs:complexType mixed="true">
+            <xs:attribute name="cena" type="xs:decimal" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dodatki">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="dodatek" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dodatek">
+    <xs:complexType mixed="true">
+      <xs:attribute name="cena" type="xs:decimal" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
