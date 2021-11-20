@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<menu_restauracji>
+<menu_restauracji xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:/C:/Users/Kuba/Desktop/J%C4%99zyki%20znacznikowe/Projekt/schema_menu_restauracji.xsd">
     <przystawki>
-      <danie typ="wegetariańskie" cena="18zł" na_wagę="NIE">
+      <danie typ="wegetariańskie" cena="18.25" na_wagę="NIE">
           <nazwa>Carpaccio z pieczonych burakow</nazwa>
           <skladniki>
             <skladnik>Buraki</skladnik>
@@ -11,11 +11,11 @@
       </danie>
     </przystawki>
     <dania_główne>
-      <danie typ="mięsne" cena="25zł" na_wagę="NIE">
+      <danie typ="mięsne" cena="25" na_wagę="NIE">
          <nazwa>Rolada śląska</nazwa>
          <skladniki>
            <skladnik>Wieprzowina</skladnik>
-            <skladnik>Ogorek</skladnik>
+          <skladnik>Ogorek</skladnik>
          </skladniki>
       </danie>
       <danie typ="ryby i owoce morza" cena="20" na_wagę="NIE">
@@ -34,7 +34,7 @@
       </danie>
     </dania_główne>
     <zupy>
-        <danie cena="7zł">
+        <danie cena="7">
           <nazwa>Zupa pomidorowa</nazwa>
           <skladniki>
             <skladnik>Pomidory</skladnik>
@@ -43,7 +43,7 @@
         </danie>
     </zupy>
     <desery>
-        <danie cena="14zł">
+        <danie cena="14">
           <nazwa>Tiramisu</nazwa>
           <skladniki>
             <skladnik>Biszkopt</skladnik>
@@ -53,11 +53,11 @@
         </danie>
     </desery>
     <napoje>
-      <napój cena="5zł">Kawa</napój>
-      <napój cena="4zł">Herbata</napój>
+      <napój cena="5">Kawa</napój>
+      <napój cena="4">Herbata</napój>
     </napoje>
     <dodatki>
-      <dodatek cena="7zł">Frytki</dodatek>
-      <dodatek cena="11zł">Sałatka cezar</dodatek>
+      <dodatek cena="7.14">Frytki</dodatek>
+      <dodatek cena="11">Sałatka cezar</dodatek>
     </dodatki>
 </menu_restauracji>
