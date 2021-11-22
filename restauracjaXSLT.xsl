@@ -117,6 +117,30 @@
                   </tr>
                 </table>
             </xsl:for-each>
+            <h2><center>Dodatki</center></h2>
+              <xsl:for-each select="//dodatki/dodatek">
+                  <h3><center><xsl:value-of select="text()" /></center></h3>
+                  <table align="center">
+                  <tr>
+                    <th text-align="center">Cena</th>
+                  </tr>
+                  <tr>
+                    <td><h4><xsl:value-of select="@cena" /></h4></td>
+                  </tr>
+                </table>
+              </xsl:for-each>
+              <h2><center>Napoje</center></h2>
+              <xsl:for-each select="//napoje/napój">
+                  <h3><center><xsl:value-of select="text()" /></center></h3>
+                  <table align="center">
+                  <tr>
+                    <th text-align="center">Cena</th>
+                  </tr>
+                  <tr>
+                    <td><h4><xsl:value-of select="@cena" /></h4></td>
+                  </tr>
+                </table>
+              </xsl:for-each>
       </body>
     </html>
   </xsl:template>
