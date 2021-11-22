@@ -65,6 +65,58 @@
                   </tr>
                 </table>
             </xsl:for-each>
+            <h2><center>Zupy</center></h2>
+            <xsl:for-each select="//zupy/danie">
+              <h3><center><xsl:value-of select="nazwa" /></center></h3>
+                <table align="center">
+                  <tr>
+                    <th text-align="center">Cena</th>
+                  </tr>
+                  <tr>
+                    <td><h4><xsl:value-of select="@cena" /></h4></td>
+                  </tr>
+                </table>
+                <table align ="center">
+                  <tr>
+                    <th text-align="center">Składniki</th>
+                  </tr>
+                  <tr>
+                    <td><h5><center>
+                    <xsl:for-each select="skladniki/skladnik">
+                    <xsl:text> </xsl:text>
+                    <xsl:value-of select="text()" />
+                    <xsl:text> </xsl:text>
+                    </xsl:for-each>
+                    </center></h5> </td>
+                  </tr>
+                </table>
+            </xsl:for-each>
+            <h2><center>Desery</center></h2>
+            <xsl:for-each select="//desery/danie">
+              <h3><center><xsl:value-of select="nazwa" /></center></h3>
+                <table align="center">
+                  <tr>
+                    <th text-align="center">Cena</th>
+                  </tr>
+                  <tr>
+                    <td><h4><xsl:value-of select="@cena" /></h4></td>
+                  </tr>
+                </table>
+                <table align ="center">
+                  <tr>
+                    <th text-align="center">Składniki</th>
+                  </tr>
+                  <tr>
+                    <td><h5><center>
+                    <xsl:for-each select="skladniki/skladnik">
+                    <xsl:text> </xsl:text>
+                    <xsl:value-of select="text()" />
+                    <xsl:text> </xsl:text>
+                    </xsl:for-each>
+                    </center></h5> </td>
+                  </tr>
+                </table>
+            </xsl:for-each>
       </body>
     </html>
   </xsl:template>
