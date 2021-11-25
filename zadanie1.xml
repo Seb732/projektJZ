@@ -1,0 +1,63 @@
+<kadry>
+    <pracownik id="1">
+        <dane_podstawowe>
+            <imie>Jan</imie>
+            <drugieimie></drugieimie>
+            <nazwisko>Kowalski</nazwisko>
+            <daneUrodzenia data="1/4/1980" miejscowosc="Poznań"/>
+            <pesel>800700200211</pesel>
+            <dzieci>
+                <dziecko>
+                    <imie>Karolina</imie>
+                    <daneUrodzenia data="3/07/2008" miejscowosc="Krakow"/>
+                </dziecko>
+                <dziecko>
+                    <imie>Damian</imie>
+                    <daneUrodzenia data="3/07/2008" miejscowosc="Krakow"/>
+                </dziecko>
+            </dzieci>
+        </dane_podstawowe>
+        <dane_kontaktowe>
+            <miasto>Kraków</miasto>
+            <kod_pocztowy>30-152</kod_pocztowy>
+            <ulica>Kuźnicy Kołłątajskiej</ulica>
+            <nrBudynku>22</nrBudynku>
+            <nrLokalu>333</nrLokalu>
+            <nrTelefonu>500 500 500</nrTelefonu>
+            <email>jankowalski@gmail.com</email>
+        </dane_kontaktowe>
+        <wyksztalcenie>
+            <uczelnia>
+                <nazwa_uczelni>AGH</nazwa_uczelni>
+                <wydzial>Wydział Zarządzania</wydzial>
+                <kierunek>Informatyka i ekonometria</kierunek>
+                <poziom>licencjat</poziom>
+                <rok_ukonczenia>2018</rok_ukonczenia>
+            </uczelnia>
+            <uczelnia>
+                <nazwa_uczelni>Uniwestytet Warszawski</nazwa_uczelni>
+                <wydzial>Wydział Prawa</wydzial>
+                <kierunek>Prawo gospodarcze</kierunek>
+                <poziom>magisterski</poziom>
+                <rok_ukonczenia>2016</rok_ukonczenia>
+            </uczelnia>
+        </wyksztalcenie>
+        <jezyki>
+            <jezyk nazwa_jezyka="angielski" poziom="dobry"/>
+            <jezyk nazwa_jezyka="niemiecki" poziom="podstawowy"/>
+        </jezyki>
+        <zatrudnienie>
+            <firma>
+                <nazwa_firmy>MPK Krakow</nazwa_firmy>
+                <stanowisko>kierowca</stanowisko>
+                <data_zatrudnienia>15/05/2015</data_zatrudnienia>
+                <data_odejscia>30/06/2020</data_odejscia>
+            </firma>
+        </zatrudnienie>
+        <doswiadczenia></doswiadczenia>
+        <zainteresowania>
+            <zainteresowanie nazwa_zainteresowania="ksiazki"/>
+            <zainteresowanie nazwa_zainteresowania="sport"/>
+        </zainteresowania>
+    </pracownik>
+</kadry>
