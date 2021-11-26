@@ -3,30 +3,41 @@
   <xsl:template match="/kadry">
     <html>
       <body>
-        <h1><center>Kadry</center></h1>
-        <xsl:for-each select="pracownik">    
-          <h3><center><xsl:value-of select="@id" /></center></h3>
-          <br></br>
-          <table align="left" border="1">
-            <thead>
-              <tr>
-                <th style="text-align:left">Imie</th>
-                <th style="text-align:left">Nazwisko</th>
-                <th style="text-align:left">Drugie imie</th>
-                <th style="text-align:left">Dane urodzenia</th>
-                <th style="text-align:left">Pesel</th>
-                <th style="text-align:left">Dzieci</th>
-                <th style="text-align:left">Dane kontaktowe</th>
-                <th style="text-align:left">Wyksztalcenie</th>
-                <th style="text-align:left">Jezyki</th>
-                <th style="text-align:left">Zatrudnienie</th>
-                <th style="text-align:left">Zainteresowania</th>
-              </tr>
-            </thead>
+        <h1>
+          <center>Kadry</center>
+        </h1>
+        <br></br>
+        <table align="left" border="1">
+          <thead>
             <tr>
-              <td><xsl:value-of select="dane_podstawowe/imie"/></td>
-              <td><xsl:value-of select="dane_podstawowe/nazwisko"/></td>
-              <td><xsl:value-of select="dane_podstawowe/drugieimie"/></td>
+              <th style="text-align:left">ID</th>
+              <th style="text-align:left">Imie</th>
+              <th style="text-align:left">Nazwisko</th>
+              <th style="text-align:left">Drugie imie</th>
+              <th style="text-align:left">Dane urodzenia</th>
+              <th style="text-align:left">Pesel</th>
+              <th style="text-align:left">Dzieci</th>
+              <th style="text-align:left">Dane kontaktowe</th>
+              <th style="text-align:left">Wyksztalcenie</th>
+              <th style="text-align:left">Jezyki</th>
+              <th style="text-align:left">Zatrudnienie</th>
+              <th style="text-align:left">Zainteresowania</th>
+            </tr>
+          </thead>
+          <xsl:for-each select="pracownik">
+            <tr>
+              <td>
+                <xsl:value-of select="@id" />
+              </td>
+              <td>
+                <xsl:value-of select="dane_podstawowe/imie"/>
+              </td>
+              <td>
+                <xsl:value-of select="dane_podstawowe/nazwisko"/>
+              </td>
+              <td>
+                <xsl:value-of select="dane_podstawowe/drugieimie"/>
+              </td>
               <td>
                 <xsl:text> ur. </xsl:text>
                 <xsl:value-of select="dane_podstawowe/daneUrodzenia/@data"/>
@@ -35,10 +46,12 @@
                 <br></br>
                 <xsl:value-of select="dane_podstawowe/daneUrodzenia/@miejscowosc"/>
               </td>
-              <td><xsl:value-of select="dane_podstawowe/pesel"/></td>
+              <td>
+                <xsl:value-of select="dane_podstawowe/pesel"/>
+              </td>
               <td>
                 <xsl:for-each select="dane_podstawowe/dzieci/dziecko">
-                  <xsl:text>        </xsl:text>
+                  <xsl:text></xsl:text>
                   <xsl:value-of select="imie"/>
                   <xsl:text> ur. </xsl:text>
                   <xsl:value-of select="daneUrodzenia/@data"/>
@@ -49,11 +62,11 @@
               </td>
               <td>
                 <xsl:value-of select="dane_kontaktowe/kod_pocztowy"/>
-                <xsl:text>        </xsl:text>
+                <xsl:text> </xsl:text>
                 <xsl:value-of select="dane_kontaktowe/miasto"/>
                 <br></br>
                 <xsl:value-of select="dane_kontaktowe/ulica"/>
-                <xsl:text>        </xsl:text>
+                <xsl:text></xsl:text>
                 <xsl:value-of select="dane_kontaktowe/nrBudynku"/>
                 <xsl:text>/</xsl:text>
                 <xsl:value-of select="dane_kontaktowe/nrLokalu"/>
@@ -110,8 +123,8 @@
                 </xsl:for-each>
               </td>
             </tr>
-          </table>
-        </xsl:for-each>
+          </xsl:for-each>
+        </table>
       </body>
     </html>
   </xsl:template>
