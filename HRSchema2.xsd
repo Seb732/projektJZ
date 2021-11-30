@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="kadry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="pracownik"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pracownik">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="dane_podstawowe"/>
+        <xs:element ref="dane_kontaktowe"/>
+        <xs:element ref="wyksztalcenie"/>
+        <xs:element ref="jezyki" minOccurs="0"/>
+        <xs:element ref="zatrudnienie" minOccurs="0"/>
+        <xs:element name="doswiadczenia" type="xs:string" minOccurs="0"/>
+        <xs:element ref="zainteresowania" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dane_podstawowe">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="imie" type="xs:string" />
+        <xs:element name="drugieimie" type="xs:string" minOccurs="0"/>
+        <xs:element name="nazwisko" type="xs:string" /> 
+        <xs:element ref="daneUrodzenia" minOccurs="0" />
+        <xs:element name="pesel" type="xs:string" />
+        <xs:element ref="dzieci"  minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="daneUrodzenia">
+    <xs:complexType>
+      <xs:attribute name="data" type="xs:string" use="required"/>
+      <xs:attribute name="miejscowosc" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dzieci">
+    <xs:complexType>
+      <xs:sequence >
+        <xs:element ref="dziecko" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dziecko">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="imie" type="xs:string"/>
+        <xs:element ref="daneUrodzenia"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dane_kontaktowe">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="miasto" type="xs:string" />
+        <xs:element name="kod_pocztowy" type="xs:string"/>
+        <xs:element name="ulica" type="xs:string"/>
+        <xs:element name="nrBudynku" type="xs:string"/>
+        <xs:element name="nrLokalu" type="xs:string" minOccurs="0"/>
+        <xs:element name="nrTelefonu" type="xs:string"/>
+        <xs:element name="email" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="wyksztalcenie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="uczelnia" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="uczelnia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nazwa_uczelni" type="xs:string"/>
+        <xs:element name="wydzial" type="xs:string" minOccurs="0"/>
+        <xs:element name="kierunek" type="xs:string"/>
+        <xs:element name="poziom" type="xs:string"/>
+        <xs:element name="rok_ukonczenia" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="jezyki">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="jezyk" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="jezyk">
+    <xs:complexType>
+      <xs:attribute name="nazwa_jezyka" type="xs:string" use="required"/>
+      <xs:attribute name="poziom" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="zatrudnienie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="firma"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="firma">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nazwa_firmy" type="xs:string"/>
+        <xs:element name="stanowisko" type="xs:string"/>
+        <xs:element name="data_zatrudnienia" type="xs:string"/>
+        <xs:element name="data_odejscia" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="zainteresowania">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="zainteresowanie" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="zainteresowanie">
+    <xs:complexType>
+      <xs:attribute name="nazwa_zainteresowania" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
