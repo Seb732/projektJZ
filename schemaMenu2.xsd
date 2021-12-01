@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="menu_restauracji">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="kategoria" maxOccurs="unbounded"/>
+        <xs:element ref="napoje"/>
+        <xs:element ref="dodatki"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="kategoria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="danie" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="nazwa" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="danie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nazwa" type="xs:string"/>
+        <xs:element ref="skladniki"/>
+      </xs:sequence>
+      <xs:attribute name="cena" type="xs:decimal" use="required"/>
+      <xs:attribute name="na_wagę" type="xs:string" use="optional"/>
+      <xs:attribute name="typ" type="xs:string" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="skladniki">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="skladnik" type="xs:string" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="napoje">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="napój" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="nazwa" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="napój">
+    <xs:complexType mixed="true">
+      <xs:attribute name="cena" type="xs:decimal" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dodatki">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="dodatek" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="nazwa" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dodatek">
+    <xs:complexType mixed="true">
+      <xs:attribute name="cena" type="xs:decimal" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
